@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffc0cb;
+            text-align: center;
+            color: #333;
+            padding: 20px;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: auto;
+        }
+        h1 {
+            color: #ff6699;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            border: 2px solid #ff6699;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        button {
+            background-color: #ff69b4;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff1493;
+        }
+        .comment-section {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .comment {
+            background: #ffecf2;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 10px 0;
+            position: relative;
+        }
+        .delete-btn {
+            background: none;
+            border: none;
+            color: red;
+            font-size: 16px;
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            cursor: pointer;
+        }
+        a {
+            text-decoration: none;
+            color: #ff6699;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📩 Contact Me 🎀</h1>
+        <p>Isi form ini kalau mau ngobrol, tanya-tanya, atau sekadar bilang 'Hai!' 😊</p>
+        <textarea id="message" placeholder="Tulis pesan kamu di sini..."></textarea>
+        <button onclick="addComment()">Kirim</button>
+        
+        <div class="comment-section" id="comments"></div>
+        
+        <h3>📱 <span style="color: #ff66b2;">Media Sosial</span></h3>
+    <p><span style="color: #ff66b2;">Email:</span> <span style="color: #ff66b2;">nisma2201@gmail.com</span></p>
+    <p><span style="color: #ff66b2;">WhatsApp:</span> <a href="https://wa.me/6281356553484" target="_blank" style="color: #ff66b2; text-decoration: none;">+62 813 5655 3484</a></p>
+    <p><span style="color: #ff66b2;">Instagram:</span> <a href="https://www.instagram.com/nisma_fathina01" target="_blank" style="color: #ff66b2; text-decoration: none;">@nisma_fathina01</a></p>
+    <p><span style="color: #ff66b2;">LinkedIn:</span> <a href="https://www.linkedin.com/in/nisma-nisma" target="_blank" style="color: #ff66b2; text-decoration: none;">Nisma Nisma</a></p>
+        
+    <button class="btn-back" onclick="window.location.href='nisma1.html'">⬅️ Back</button>
+
+    </div>
+    </div>
+
+    <script>
+        function addComment() {
+            let message = document.getElementById("message").value;
+            if (message.trim() === "") return;
+            
+            let commentSection = document.getElementById("comments");
+            let comment = document.createElement("div");
+            comment.classList.add("comment");
+            comment.innerHTML = `<p>${message}</p> <button class='delete-btn' onclick='deleteComment(this)'>❌</button>`;
+            commentSection.appendChild(comment);
+            
+            document.getElementById("message").value = "";
+        }
+
+        function deleteComment(button) {
+            let comment = button.parentElement;
+            comment.remove();
+        }
+
+        function goBack() {
+            window.location.href = "biografi_nisma.html";
+        }
+    </script>
+</body>
+</html>

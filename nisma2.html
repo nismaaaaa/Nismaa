@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Nisma</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffe4e1;
+            color: #333;
+            text-align: center;
+        }
+        .welcome {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffc0cb;
+            position: relative;
+        }
+        .navigation {
+            position: absolute;
+            width: 100%;
+            bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 30px;
+        }
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+        }
+        .nav-button:hover {
+            background: #ff1493;
+            transform: scale(1.1);
+        }
+        h1 {
+            margin: 10px 0;
+            font-size: 28px;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome">
+        <h1>✨ Welcome to My Story! 📖💖</h1>
+        <div class="navigation">
+            <a href="nisma1.html" class="nav-button">⬅️ Back</a>
+            <a href="nisma3.html" class="nav-button">Next ➡️</a>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
